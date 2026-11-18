@@ -1,0 +1,43 @@
+name: Bug report
+description: Something is broken or behaves unexpectedly
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what you saw instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open SwiftCat
+        2. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: backend
+    attributes:
+      label: Model backend
+      options:
+        - Apple Intelligence
+        - Local server (Ollama, LM Studio, llama.cpp)
+        - OpenRouter
+        - Not related to a model
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: macOS version and SwiftCat commit or release
+      placeholder: macOS 26.1, commit abc1234
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Remove API keys and personal data first.
